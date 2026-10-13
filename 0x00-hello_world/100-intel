@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
-gcc -S "$CFILE" -o "${CFILE%.c}.s"
+#!/bin/bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -S -masm=intel "$CFILE" -o "${CFILE%.c}.s"
