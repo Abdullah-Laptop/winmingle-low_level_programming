@@ -4,7 +4,7 @@
 * Program: WinMingle Community C Training
 * Description: Prints size of data type
 */
-  int main(void) 
+int main(void) 
 {
     printf("Size of a char: %zu byte(s)\n", sizeof(char));
     printf("Size of a int: %zu byte(s)\n", sizeof(int));
