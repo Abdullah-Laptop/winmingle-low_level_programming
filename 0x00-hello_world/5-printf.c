@@ -4,7 +4,8 @@
   * Program: WinMingle Community C Training
   * * Description: Prints a message using puts.
   */
-int main(void) { 
-    printf("This is how to add a new line\n");
+int main(void) 
+{ 
+    printf("with proper grammar, but the outcome is a piece of art,\n");
     return (0);
 }
