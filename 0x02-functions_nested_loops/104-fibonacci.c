@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+/**
+ * Author: Omotosho Abdullah Abiodun
+ * Program: WinMingle Community C Training
+ * Discription: print 98 fibonacci numbers
+ */
+int main(void)
+{
+     unsigned long a_high = 0, a_low = 1;
+     unsigned long b_high = 0, b_low = 2;
+     unsigned long next_high, next_low;
+     int i; 
+
+     for (i = 0; i < 98; i++)
+        {
+            if (i > 0)
+                printf(", ");
+
+            if (a_high == 0)
+                printf("%lu", a_low);
+            else
+                printf("%lu%09lu", a_high, a_low);
+           
+            next_low = a_low + b_low;
+            next_high = a_high + b_high;
+
+            if (next_low >= 1000000000)
+            {
+                next_low -= 1000000000;
+                next_high++;
+            }
+
+            a_high = b_high;
+            a_low = b_low;
+
+            b_high = next_high;
+            b_low = next_low;
+        }
+
+        printf("\n");
+
+    return (0);
+}
