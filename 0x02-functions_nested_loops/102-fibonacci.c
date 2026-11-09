@@ -1,29 +1,48 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * Author: Omotosho Abdullah Abiodun
  * Program: WinMingle Community C Training
  * Discription: write Program the print natural
  */
-int main(void)
+void print_ulong(unsigned long n)
+{
+    unsigned long divisor;
+
+    divisor = 1;
+
+    while(n / divisor >= 10)
+        divisor *= 10;
+
+    while(divisor > 0)
+    {
+        _putchar((n / divisor) % 10 + '0');
+        divisor /= 10;
+    }
+}
+void print_fibonacci(void)
 {
      unsigned long first = 1;
      unsigned long second = 2;
      unsigned long next;
-     int count;
+     int count = 0;
 
-    printf("%lu, %lu", first, second);
+     while(count < 50)
+     {
+         print_ulong(first);
 
-        for (count = 3; count <= 50; count++)
-        {
-            next = first + second;
-            printf(", %lu", next);
+         if(count != 49)
+         {
+             _putchar(',');
+             _putchar(' ');
+         }
 
-            first = second;
-            second = next;
+         next = first + second;
+         first = second;
+         second = next;
 
-        }
-    printf("\n");
+         count++;
+     }
 
-    return (0);
+     _putchar('\n');
 }
