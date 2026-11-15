@@ -11,19 +11,19 @@ void print_triangle(int size)
     int space;
     int hars;
 
-    if(size <= 0)
+    if (size <= 0)
     {
         _putchar('\n');
         return;
     }
 
-    for(row = 0; row < size; row++)
+    for (row = 0; row < size; row++)
     {
-        for(space = 0; space < size - row -1; space++)
+        for (space = 0; space < size - row -1; space++)
         {
             _putchar(' ');
         }
-        for(hars = 0; hars <= row; hars++)
+        for (hars = 0; hars <= row; hars++)
         {
             _putchar('#');
         }
