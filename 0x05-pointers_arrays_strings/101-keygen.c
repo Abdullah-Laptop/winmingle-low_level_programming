@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 
 /**
  * Author: Omotosho Abdullah Abiodun
@@ -9,25 +7,30 @@
  */
 int main(void)
 {
+    unsigned int seed;
     int sum;
     int n;
+    int remaining;
 
+    seed = 123456789;
     sum = 0;
-    srand(time(NULL));
 
-    while(sum < 2772)
+    while (sum < 2772)
     {
-        n = 33 + rand() % 94;
+        seed = seed * 1103515245u + 12345u;
+        n = 33 + seed % 94;
+        remaining = 2772 - sum;
 
-        if(sum + n > 2772 - 33 && sum + n < 2772)
+        if (n < remaining && remaining - n < 33)
             continue;
 
-        if(sum + n > 2772)
-            n = 2772 - sum;
+        if (n > remaining)
+            n = remaining;
 
-        printf("%c", n);
+        _putchar ((char)n);
         sum += n;
     }
-    printf("\n");
-    return(0);
+
+    _putchar ('\n');
+    return (0);
 }
