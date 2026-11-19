@@ -1,0 +1,19 @@
+#include "main.h"
+
+/*
+ * Author: Omotosho Abdullah Abiodun
+ * Program: WinMingle Community C Training
+ * Description: Function that join two strings using at most n.
+ */
+void reverse_array(int *a, int n)
+{
+    int i;
+    int temp;
+
+    for (i = 0; i < n / 2; i++)
+    {
+        temp = a[i];
+        a[i] = a[n - 1 - i];
+        a[n - 1 - i] = temp;
+    }
+}
