@@ -3,7 +3,7 @@
 /*
  * Author: Omotosho Abdullah Abiodun
  * Program: WinMingle Community C Training
- * Description: Function that join two strings using at most n.
+ * Description: Function that reverse array.
  */
 void reverse_array(int *a, int n)
 {
